@@ -1,16 +1,308 @@
 extends _layout
+block vars
+	- var bodyClass = 'home'
 block content
 	main.main-content
-		.sprite-example
-			h2.heading Sprite example
-			i.facebook-logo__icon
-			i.google-plus-logo__icon
-			i.instagram-logo__icon
-			i.twitter-logo__icon
-			i.youtube-logo__icon
-		.author-git
-			h2 Github link
-			a(href="https://github.com/narek-t/gulp-jade-sass" target="_blank") https://github.com/narek-t/gulp-jade-sass
+		.home-slider
+			.slick-slide(style="background-image: url(img/slide1.jpg)")
+				.container
+					.slick-slide__inner
+						h3 Расчет стоимости за<br>5 минут
+						.links-wrap
+							a.order.gradient-btn(href="#") ЗАЯВКА НА ПЕРЕВОД
+							a.view-more(href="#") ПОДРОБНЕЕ
+			.slick-slide(style="background-image: url(img/slide2.jpg)")
+				.container
+					.slick-slide__inner
+						h3 Перевод паспорта<br>700 рублей
+						.links-wrap
+							a.order.gradient-btn(href="#") ЗАЯВКА НА ПЕРЕВОД
+							a.view-more(href="#") ПОДРОБНЕЕ
+			.slick-slide(style="background-image: url(img/slide3.jpg)")
+				.container
+					.slick-slide__inner
+						h3 При заказе в первый раз<br>скидка 10%
+						.links-wrap
+							a.order.gradient-btn(href="#") ЗАЯВКА НА ПЕРЕВОД
+							a.view-more(href="#") ПОДРОБНЕЕ
+		.home-slider__bottom
+			.container.cf
+				img(src="img/slider-botttom.png", alt="")
+				p -  Все интересующие вопросы вы можете узнать прямо сейчас!
+				a(href="#") УЗНАТЬ
+		.why-we
+			.img-wrap
+				.img(style="background-image: url(img/why.jpg)")
+			.container
+				.text-wrap
+					h2.bordered-title Почему A-Z Translate отличный выбор
+					p «A-Z Translate» - современное переводческое бюро, которое предоставляет переводческие услуги различных тематик и любой сферы. Мы работаем более чем с десятью иностранными языками. Наши профессиональные специалисты готовы осуществить качественные переводы максимально удобным для Вас способом. У нас Вы будете ощущать комфорт и спокойствие, ведь мы ценим наших клиентов и знаем значение слова «сервис». Мы стремимся к долгосрочному и плодотворному сотрудничеству с каждым из наших клиентов и прикладываем к этому максимум усилий.
+					p Наше бюро выполнило большое количество разных заказов. Вы еще не связались с нами? Тогда не стоит терять время, мы Вас ждём!
+		.home-services
+			.home-services__item(style="background-image: url(img/h-services1.jpg)")
+				p.title Технический перевод
+				.back-side
+					p.title Технический перевод
+					ul
+						li - Выписка из медицинской карты
+						li - Листок нетрудоспособности
+						li - Медицинская справка
+						li - Медицинское заключение
+						li - Результаты анализов и обследований
+					span.more Подробнее
+				a.full-link(href="#")
+			.home-services__item(style="background-image: url(img/h-services2.jpg)")
+				p.title  Медицинский перевод
+				.back-side
+					p.title Медицинский перевод:
+					ul
+						li - Выписка из медицинской карты
+						li - Листок нетрудоспособности
+						li - Медицинская справка
+						li - Медицинское заключение
+						li - Результаты анализов и обследований
+					span.more Подробнее
+				a.full-link(href="#")
+			.home-services__item(style="background-image: url(img/h-services3.jpg)")
+				p.title Коммерческий перевод 
+				.back-side
+					p.title Коммерческий перевод 
+					ul
+						li - Выписка из медицинской карты
+						li - Листок нетрудоспособности
+						li - Медицинская справка
+						li - Медицинское заключение
+						li - Результаты анализов и обследований
+					span.more Подробнее
+				a.full-link(href="#")
+			.home-services__item(style="background-image: url(img/h-services4.jpg)")
+				p.title Юридический перевод
+				.back-side
+					p.title Юридический перевод
+					ul
+						li - Выписка из медицинской карты
+						li - Листок нетрудоспособности
+						li - Медицинская справка
+						li - Медицинское заключение
+						li - Результаты анализов и обследований
+					span.more Подробнее
+				a.full-link(href="#")
+			.home-services__item(style="background-image: url(img/h-services5.jpg)")
+				p.title Локализация IT продуктов
+				.back-side
+					p.title Локализация IT продуктов
+					ul
+						li - Выписка из медицинской карты
+						li - Листок нетрудоспособности
+						li - Медицинская справка
+						li - Медицинское заключение
+						li - Результаты анализов и обследований
+					span.more Подробнее
+				a.full-link(href="#")
+			.home-services__item(style="background-image: url(img/h-services6.jpg)")
+				p.title Перевод для бизнеса
+				.back-side
+					p.title Перевод для бизнеса
+					ul
+						li - Выписка из медицинской карты
+						li - Листок нетрудоспособности
+						li - Медицинская справка
+						li - Медицинское заключение
+						li - Результаты анализов и обследований
+					span.more Подробнее
+				a.full-link(href="#")
+			.home-services__item(style="background-image: url(img/h-services7.jpg)")
+				p.title Перевод документов
+				.back-side
+					p.title Перевод документов
+					ul
+						li - Выписка из медицинской карты
+						li - Листок нетрудоспособности
+						li - Медицинская справка
+						li - Медицинское заключение
+						li - Результаты анализов и обследований
+					span.more Подробнее
+				a.full-link(href="#")
+			.home-services__item(style="background-image: url(img/h-services8.jpg)")
+				p.title Медиа переводы
+				.back-side
+					p.title Медиа переводы
+					ul
+						li - Выписка из медицинской карты
+						li - Листок нетрудоспособности
+						li - Медицинская справка
+						li - Медицинское заключение
+						li - Результаты анализов и обследований
+					span.more Подробнее
+				a.full-link(href="#")
+			.home-services__item(style="background-image: url(img/h-services9.jpg)")
+				p.title Спортивный перевод
+				.back-side
+					p.title Спортивный перевод
+					ul
+						li - Выписка из медицинской карты
+						li - Листок нетрудоспособности
+						li - Медицинская справка
+						li - Медицинское заключение
+						li - Результаты анализов и обследований
+					span.more Подробнее
+				a.full-link(href="#")
+			.home-services__item(style="background-image: url(img/h-services10.jpg)")
+				p.title Художественный перевод
+				.back-side
+					p.title Художественный перевод
+					ul
+						li - Выписка из медицинской карты
+						li - Листок нетрудоспособности
+						li - Медицинская справка
+						li - Медицинское заключение
+						li - Результаты анализов и обследований
+					span.more Подробнее
+				a.full-link(href="#")
+			.home-services__item(style="background-image: url(img/h-services11.jpg)")
+				p.title Научные переводы
+				.back-side
+					p.title Научные переводы
+					ul
+						li - Выписка из медицинской карты
+						li - Листок нетрудоспособности
+						li - Медицинская справка
+						li - Медицинское заключение
+						li - Результаты анализов и обследований
+					span.more Подробнее
+				a.full-link(href="#")
+			.home-services__item(style="background-image: url(img/h-services12.jpg)")
+				p.title Другие виды переводов и услуг
+				.back-side
+					p.title Другие виды переводов и услуг
+					ul
+						li - Выписка из медицинской карты
+						li - Листок нетрудоспособности
+						li - Медицинская справка
+						li - Медицинское заключение
+						li - Результаты анализов и обследований
+					span.more Подробнее
+				a.full-link(href="#")
+		.home-order
+			.container
+				h2.simple-title Как заказать перевод у нас?
+				.home-order__list
+					.home-order__list-item
+						img(src="img/home-order1.png", alt="")
+						p.title Заявка 
+						p.description Оставляйте нам заявку на сайте/почте/звоните по телефону
+					.home-order__list-item
+						img(src="img/home-order2.png", alt="")
+						p.title Звонок менеджера
+						p.description Наш персональный менеджер свяжется с Вами для уточнения деталей
+					.home-order__list-item
+						img(src="img/home-order3.png", alt="")
+						p.title Согласование
+						p.description На этом этапе мы согласовываем с Вами объемы, сроки и сумму перевода
+					.home-order__list-item
+						img(src="img/home-order4.png", alt="")
+						p.title Выполнение заказа
+						p.description А это самый приятный этап - Вы получаете выполненный перевод :)
+				a.order(href="#") Все очень просто :)
+		.home-testimonials
+			.testimonials-prev.slick-arrows
+			.testimonials-next.slick-arrows
+			.container
+				h2.simple-title А вот и отзывы наших клиентов:
+				.testimonials-slider
+					.slick-slide
+						p.name Анна
+						p.company ОАО "АльфаСтрахование"
+						p.review Добрый день! Хочу выразить благодарность бюро переводов "AZ Translate" за быструю и качественную работу. Особенно хотелось бы поблагодарить Желанного Антона за то, что позаботился о том, чтобы перевод был выполнен как можно быстрее, что никак не сказалось на качестве работы. Всем рекомендую обращаться к специалистам этой компании.
+						p.type Коммерческий перевод
+					.slick-slide
+						p.name Мария Бондаренко
+						p.company “Технофасад”
+						p.review Заказывала перевод свидетельства и другх документов с нотариальным заверением, процесс прошел быстро, внимание и четкость в работе сотрудников мне понравились. Благодарю!
+						p.type Юридический перевод
+					.slick-slide
+						p.name Анатолий Мистрюков
+						p.company ОАО "АльфаСтрахование"
+						p.review Заказывал в бюро перевод контракта. От вычитки и редактуры профессионалом отказался — и необходимости в этом не было, и позволило уменьшить стоимость услуг. Даже без этой финальной доводки перевод вышел качественный, никаких исправлений самостоятельно не вносил. Отдельно хочу поблагодарить Александру Агафонову...
+						p.type Редактура научного текста
+					.slick-slide
+						p.name Анна
+						p.company ОАО "АльфаСтрахование"
+						p.review Добрый день! Хочу выразить благодарность бюро переводов "AZ Translate" за быструю и качественную работу. Особенно хотелось бы поблагодарить Желанного Антона за то, что позаботился о том, чтобы перевод был выполнен как можно быстрее, что никак не сказалось на качестве работы. Всем рекомендую обращаться к специалистам этой компании.
+						p.type Коммерческий перевод
+				a.all-testimonials(href="#") Все отзывы
+		.home-trust
+			h2.simple-title Нам доверяют:
+			.trust__list
+				.trust__list-item
+					img(src="img/trust1.png", alt="")
+				.trust__list-item
+					img(src="img/trust2.png", alt="")
+				.trust__list-item
+					img(src="img/trust3.png", alt="")
+				.trust__list-item
+					img(src="img/trust4.png", alt="")
+				.trust__list-item
+					img(src="img/trust5.png", alt="")
+		.home-advantages
+			.container
+				h2.simple-title Наши преимущества
+				.home-advantages__list
+					.home-advantages__item
+						img(src="img/adventages1.png", alt="")
+						p.title Высокое качество переводов 
+						p.description В нашей команде только высококвалифицированные специалисты, которые обеспечат Вам качественный перевод 
+					.home-advantages__item
+						img(src="img/adventages2.png", alt="")
+						p.title Удобная система работы
+						p.description Вы можете разместить заказ по телефону, электронной почте, директе. Возможность связаться с нами не только в рабочее время, мы работаем и в праздничные дни
+					.home-advantages__item
+						img(src="img/adventages3.png", alt="")
+						p.title Персональный подход к каждому клиенту 
+						p.description Мы сделаем всё, чтобы наше сотрудничество было максимально комфортным для Вас
+					.home-advantages__item
+						img(src="img/adventages4.png", alt="")
+						p.title Предоставление скидок
+						p.description Мы делаем скидки на первый заказ, а для постоянных клиентов у нас приятные скидки и никакой предоплаты. Мы предоставляем умеренные цены и гибкую ценовую политику.
+		.home-order
+			.container
+				h2.simple-title Закажите перевод прямо сейчас!
+				form.home-order__form(method="post" enctype="multipart/form-data")
+					.home-order__inputs
+						input.simple-input(type="text" placeholder="Имя")
+						select.simple-input(required)
+							option(value="" disabled selected hidden) Выбор перевода:
+							option(value="Выбор перевода") перевода 2
+							option(value="Выбор перевода") перевода 3
+							option(value="Выбор перевода") перевода 4
+							option(value="Выбор перевода") перевода 5
+							option(value="Выбор перевода") перевода 6
+							option(value="Выбор перевода") перевода 7
+						input.simple-input(type="email" placeholder="Email:")
+						textarea.simple-input(placeholder="Комментарий")
+					.home-order__file
+						.home-order__file-inner#demo-upload
+							p.title Вы можете просто перетянуть сюда ваши файлы.
+							.allowed-file-list
+								img(src="img/file1.png", alt="")
+								img(src="img/file2.png", alt="")
+								img(src="img/file3.png", alt="")
+								img(src="img/file4.png", alt="")
+								img(src="img/file5.png", alt="")
+								img(src="img/file6.png", alt="")
+								img(src="img/file7.png", alt="")
+								img(src="img/file8.png", alt="")
+							p.allowed-text Поддерживаемые форматы файлов.
+							p.click-to-add 
+								span Нажмите чтобы добавить файл с вашего устройства
+					input.gradient-btn(type="submit" value="ОТПРАВИТЬ")
+
+
+
+
+
+
+
 
 
 

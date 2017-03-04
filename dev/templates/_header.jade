@@ -1,4 +1,32 @@
 block header
 
 	header.site-header
-		h1 Blank template for frontend developers
+		.site-header__top.container.cf
+			a.logo(href="#")
+				img(src="img/logo.png", alt="") 
+			p.site-header__email Просто отправьте вашу задачу нам: 
+				a(href="mailto:aztranslate@gmail.com") aztranslate@gmail.com
+			.site-header__tel
+				a.site-header__tel-number(href="tel:8 (962) 5041125") 8 (962) 5041125
+				a.site-header__tel-order(href="#") Заказать перевод
+		nav.main-menu
+			button.toggle-mobile
+				span
+				span
+				span
+			.container
+				ul.main-menu__list
+					li
+						a(href="#") Главная
+					li
+						a(href="#") Услуги
+					li
+						a(href="#") Цены
+					li
+						a(href="#") Оформление заказа
+					li
+						a(href="#") Оплата
+					li
+						a(href="#") Отзывы
+					li
+						a(href="#") О компании
