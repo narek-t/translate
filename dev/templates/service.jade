@@ -1,0 +1,138 @@
+extends _layout
+block vars
+	- var bodyClass = 'single'
+block content
+	main.main-content
+			.container.cf
+				.with__sidebar-layout
+					.content.content__width-sidebar
+						.breadcrumbs
+							a(href="#") Главная 
+							span.sep > 
+							a(href="#") Услуги 
+							span.sep > 
+							span Технический перевод
+						h1.inner__title.bordered-title.single__title(style="background-image: url(img/service-ico.png)") Технический перевод
+						p Тексты технической тематики весьма разнообразны. Как правило, тип текста во многом обуславливает нужный уровень квалификации переводчика и требования к переводу. В основе технического перевода лежит формально-логический стиль, который характеризуется точностью, неэмоциональностью и безличностью. В лексике используется много терминов латинского или греческого происхождения. Грамматика технических переводов характеризуется использованием специфических и твердо устоявшихся грамматических норм: неопределенно-личные и безличные конструкции и прочее.  Работаем c документами всех форматов. 
+						p Осуществляем перевод:
+						img.alignright(src="img/service-img.jpg", alt="")
+						ul
+							li аннотаций;
+							li патентов;
+							li каталогов;
+							li инструкций по эксплуатации (мануалов);
+							li чертежей и схем;
+							li руководств по монтажу и эксплуатации;
+							li нормативных документов;
+							li технических описаний и спецификаций;
+							li стандартов;
+							li сопроводительных документов;
+							li сертификатов/технических паспортов;
+							li рекламно-технических материалов;
+							li отчётов технических служб;
+							li листы безопасности
+						.single-order
+							p.title Заказать перевод
+							form
+								.single-order__row
+									p Введите удобный способ для связи: <br>Телефон, E-mail, Skype...
+									input(type="text")
+									input.gradient-btn(type="submit" value="ЗАКАЗАТЬ ПЕРЕВОД")
+						p Для расчета стоимости перевода пожалуйста свяжитесь с нашими менеджерами.<br>Вы также можете отправить запрос на электронную почту 
+							a(href="mailto:aztranslate@gmail.com" style="font-weight: bold; color:#165f9d; text-decoration: none") aztranslate@gmail.com<br>
+							| Мы ответим в течение 5 минут!
+
+
+									
+					aside.sidebar
+						h2.inner__title Услуги:
+						ul.services__menu
+							li.current-menu-item
+								a(href="#") Технический перевод
+							li
+								a(href="#") Медицинский перевод
+							li
+								a(href="#") Коммерческий перевод 
+							li
+								a(href="#") Юридический перевод
+							li
+								a(href="#") Локализация IT продуктов
+							li
+								a(href="#") Перевод для бизнеса
+							li
+								a(href="#") Перевод документов
+							li
+								a(href="#") Медиа переводы
+							li
+								a(href="#") Спортивный перевод
+							li
+								a(href="#") Художественный перевод
+							li
+								a(href="#") Популярные переводы
+							li
+								a(href="#") Другие виды переводов
+						.ask-question
+							img(src="img/sidebar-img.png", alt="")
+							p -  Все интересующие вопросы вы можете узнать прямо сейчас!
+							a(href="#") Задать вопрос
+			.home-order(style="background: #ececec")
+				.container
+					h2.simple-title Как заказать перевод у нас?
+					.home-order__list
+						.home-order__list-item
+							img(src="img/home-order1.png", alt="")
+							p.title Заявка 
+							p.description Оставляйте нам заявку на сайте/почте/звоните по телефону
+						.home-order__list-item
+							img(src="img/home-order2.png", alt="")
+							p.title Звонок менеджера
+							p.description Наш персональный менеджер свяжется с Вами для уточнения деталей
+						.home-order__list-item
+							img(src="img/home-order3.png", alt="")
+							p.title Согласование
+							p.description На этом этапе мы согласовываем с Вами объемы, сроки и сумму перевода
+						.home-order__list-item
+							img(src="img/home-order4.png", alt="")
+							p.title Выполнение заказа
+							p.description А это самый приятный этап - Вы получаете выполненный перевод :)
+					a.order(href="#") Все очень просто :)
+			.home-order
+				.container
+					h2.simple-title Закажите перевод прямо сейчас!
+					form.home-order__form(method="post" enctype="multipart/form-data")
+						.home-order__inputs
+							input.simple-input(type="text" placeholder="Имя")
+							select.simple-input(required)
+								option(value="" disabled selected hidden) Выбор перевода:
+								option(value="Выбор перевода") перевода 2
+								option(value="Выбор перевода") перевода 3
+								option(value="Выбор перевода") перевода 4
+								option(value="Выбор перевода") перевода 5
+								option(value="Выбор перевода") перевода 6
+								option(value="Выбор перевода") перевода 7
+							input.simple-input(type="email" placeholder="Email:")
+							textarea.simple-input(placeholder="Комментарий")
+						.home-order__file
+							.home-order__file-inner#demo-upload
+								p.title Вы можете просто перетянуть сюда ваши файлы.
+								.allowed-file-list
+									img(src="img/file1.png", alt="")
+									img(src="img/file2.png", alt="")
+									img(src="img/file3.png", alt="")
+									img(src="img/file4.png", alt="")
+									img(src="img/file5.png", alt="")
+									img(src="img/file6.png", alt="")
+									img(src="img/file7.png", alt="")
+									img(src="img/file8.png", alt="")
+								p.allowed-text Поддерживаемые форматы файлов.
+								p.click-to-add 
+									span Нажмите чтобы добавить файл с вашего устройства
+						input.gradient-btn(type="submit" value="ОТПРАВИТЬ")
+
+
+
+
+
+
+
+block inlineScripts

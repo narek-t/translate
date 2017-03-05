@@ -21,6 +21,11 @@ $(document).ready(function() {
 		thumbnailWidth: 100,
 		thumbnailHeight: 100,
 	});
+
+	$('.honor-slider').slick({
+		prevArrow: $('.honor-prev'),
+		nextArrow: $('.honor-next'),
+	})
 	var ifMap = document.getElementById('map');
 	if(ifMap) {
 		var myLatLng = {lat: 56.3402182, lng: 43.9314179};
