@@ -1,0 +1,95 @@
+extends _layout
+block vars
+	- var bodyClass = 'payment'
+block content
+	main.main-content
+			.container.cf
+				.with__sidebar-layout
+					.content.content__width-sidebar
+						.breadcrumbs
+							a(href="#") Главная 
+							span.sep > 
+							a(href="#") Услуги 
+							span.sep > 
+							span Технический перевод
+						h1.inner__title.bordered-title Оплата
+						h2 Способы оплаты:
+						p Мы стремимся сделать порядок и условия оплаты максимально удобными для всех наших клиентов и предлагаем различные способы проведения оплаты за улуги перевода, чтобы Вы могли выбрать наиболее удобный для Вас вариант:
+						ul
+							li Безналичный расчет - по выставленному счету или в банке с нашими реквизитами
+							li Наличными при личной встречи
+							li Банковской картой через интернет
+							li Электронный кошелек - перевод на наш Яндекс.кошелек 41001451530041
+						p Если Вам удобнее оплатить другими способами (перевод денег на карту Сбербанка, оплата наличными курьеру), пожалуйста, уточните у наших менеджеров, доступна ли на данный момент такая опция.
+						h2 Наши реквизиты:
+						.requisites
+							p Полное наименование:  
+							p Общество с ограниченной ответственностью «Центр Переводов «ТЕРРА»
+							p Юридический и фактический адрес: 198095, Санкт-Петербург, Митрофаньевское ш., д.2, корп. 1, офис 218
+							p ИНН/КПП 7839417510/783901001
+							p ОГРН 1107847013999
+							p ОКПО 64248884
+							p Полное наименование филиала: Филиал «Петровский» Публичного акционерного общества «Ханты-Мансийский банк Открытие». Сокращенное наименование: Ф-л ПТР ПАО «Ханты-Мансийский банк Открытие»
+							br
+							br
+							p Р/С 40702810101053400111
+							p Кор/счет: 30101810740300000809
+							p БИК: 044030809
+						.download-side
+							a.download-side__item(href="#" style="background-image: url(img/download-ico.png)") СКАЧАТЬ ДОГОВОР
+							a.download-side__item(href="#" style="background-image: url(img/download-ico1.png)") Скачать реквизиты
+							a.download-side__item(href="#" style="background-image: url(img/download-ico2.png)") Скачать квитанцию
+
+					aside.sidebar
+						.home-order
+							.container
+								.home-order__list
+									.home-order__list-item
+										img(src="img/home-order1.png", alt="")
+										p.title Заявка 
+										p.description Оставляйте нам заявку на сайте/почте/звоните по телефону
+									.home-order__list-item
+										img(src="img/home-order2.png", alt="")
+										p.title Звонок менеджера
+										p.description Наш персональный менеджер свяжется с Вами для уточнения деталей
+									.home-order__list-item
+										img(src="img/home-order3.png", alt="")
+										p.title Согласование
+										p.description На этом этапе мы согласовываем с Вами объемы, сроки и сумму перевода
+									.home-order__list-item
+										img(src="img/home-order4.png", alt="")
+										p.title Выполнение заказа
+										p.description А это самый приятный этап - Вы получаете выполненный перевод :)
+								a.order(href="#") Все очень просто :)
+						.ask-question
+							img(src="img/sidebar-img.png", alt="")
+							p -  Все интересующие вопросы вы можете узнать прямо сейчас!
+							a(href="#") Задать вопрос
+			.home-advantages
+				.container
+					h2.simple-title Наши преимущества
+					.home-advantages__list
+						.home-advantages__item
+							img(src="img/adventages1.png", alt="")
+							p.title Высокое качество переводов 
+							p.description В нашей команде только высококвалифицированные специалисты, которые обеспечат Вам качественный перевод 
+						.home-advantages__item
+							img(src="img/adventages2.png", alt="")
+							p.title Удобная система работы
+							p.description Вы можете разместить заказ по телефону, электронной почте, директе. Возможность связаться с нами не только в рабочее время, мы работаем и в праздничные дни
+						.home-advantages__item
+							img(src="img/adventages3.png", alt="")
+							p.title Персональный подход к каждому клиенту 
+							p.description Мы сделаем всё, чтобы наше сотрудничество было максимально комфортным для Вас
+						.home-advantages__item
+							img(src="img/adventages4.png", alt="")
+							p.title Предоставление скидок
+							p.description Мы делаем скидки на первый заказ, а для постоянных клиентов у нас приятные скидки и никакой предоплаты. Мы предоставляем умеренные цены и гибкую ценовую политику.
+
+
+
+
+
+
+
+block inlineScripts

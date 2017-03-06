@@ -1,0 +1,49 @@
+extends _layout
+block vars
+	- var bodyClass = 'contacts'
+block content
+	main.main-content
+			.container.cf
+				.content
+					.breadcrumbs
+						a(href="#") Главная 
+						span.sep > 
+						a(href="#") Услуги 
+						span.sep > 
+						span Технический перевод
+					h1.inner__title.bordered-title О компании
+					img.alignright(src="img/about-img.jpg", alt="")
+					p Бюро переводов A-Z Translate основано в 2015 году, относительно молодая, но динамично развивающаяся компания. A-Z Translate ориентировано для всех клиентов, кто нуждается в переводческих услугах и приятном сотрудничестве. 
+					p
+						strong Мы ценим наших клиентов и Ваше время. 
+					p Направление деятельности: 
+					ul
+						li Письменные переводы; 
+						li Расшифровка аудио/видеозаписей; 
+						li Написание статей и эссе на разных языках; 
+						li Помощь ученикам и студентам в выполнении домашнего задания; 
+						li Помощь в переписке и общении с иностранными гражданами;
+					.contacts__page
+						.contacts__page-col
+							h2 Наши контакты:
+							p.address Россия, Нижний Новгород, микрорайон Мещерское Озеро, Мещерский бульвар, 9
+							p.tel 
+								a(href="tel:8-960-453-44-56") 8-960-453-44-56
+							p.email
+								a(href="mailto:aztranslate@gmail.com") aztranslate@gmail.com
+							form
+								input.simple-input(type="text" placeholder="Имя")
+								input.simple-input(type="email" placeholder="Email:")
+								textarea.simple-input(placeholder="Комментарий")
+								input.gradient-btn(type="submit" value="ОТПРАВИТЬ")
+						.contacts__page-col
+							#map.contacts-map
+
+
+
+
+
+
+
+
+block inlineScripts
