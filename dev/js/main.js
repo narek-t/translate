@@ -26,6 +26,12 @@ $(document).ready(function() {
 		prevArrow: $('.honor-prev'),
 		nextArrow: $('.honor-next'),
 	})
+
+	$('.toggle-mobile').click(function(event) {
+		event.preventDefault();
+		$(this).toggleClass('active');
+		$('.main-menu__list').toggleClass('active');
+	});
 	var ifMap = document.getElementById('map');
 	if(ifMap) {
 		var myLatLng = {lat: 56.3402182, lng: 43.9314179};

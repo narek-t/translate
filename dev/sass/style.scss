@@ -4,6 +4,8 @@
 @import "_slick.scss";
 @import "_jquery.fancybox.min.scss";
 
+//1500, 1350, 1000
+
 //sticky footer
 html, body {
 	height: 100%;
@@ -151,6 +153,12 @@ a img.aligncenter {
 
 .site-header__top {
 	height: 125px;
+	@media screen and (max-width: 1350px) {
+		height: 100px;
+	}
+	@media screen and (max-width: 1000px) {
+		height: auto;
+	}
 }
 
 .logo {
@@ -161,6 +169,21 @@ a img.aligncenter {
 		display: block;
 		max-width: 100%;
 		height: auto;
+		@media screen and (max-width: 1350px) {
+			max-width: 250px;
+		}
+	}
+	@media screen and (max-width: 1350px) {
+		margin-top: 19px;
+	}
+	@media screen and (max-width: 1000px) {
+		float: none;
+		margin: 10px 0 10px;
+		text-align: center;
+		img {
+			margin: auto;
+			max-width: 100%;
+		}
 	}
 }
 
@@ -169,6 +192,11 @@ a img.aligncenter {
 	font: 700 18px $roboto;
 	color: #165f9d;
 	float: left;
+	@media screen and (max-width: 1350px) {
+		margin-left: 40px;
+		font-size: 15px;
+		margin-top: 42px;
+	}
 	a {
 		font-weight: 300;
 		font-size: 16px;
@@ -177,6 +205,11 @@ a img.aligncenter {
 		margin-left: 20px;
 		padding-left: 30px;
 		background: url(../img/small-email-ico.png) left center no-repeat;
+	}
+	@media screen and (max-width: 1000px) {
+		float: none;
+		margin: 10px 0 0;
+		text-align: center;
 	}
 }
 
@@ -189,6 +222,10 @@ a img.aligncenter {
 		color: #165f9d;
 		text-decoration: none;
 		background: url(../img/phone-ico.png) left center no-repeat;
+		@media screen and (max-width: 1350px) {
+			font-size: 20px;
+			padding-left: 30px;
+		}
 	}
 	&-order {
 		display: block;
@@ -196,11 +233,60 @@ a img.aligncenter {
 		text-decoration: none;
 		font: 700 18px $open;
 		color: #165f9d;
+		@media screen and (max-width: 1350px) {
+			font-size: 15px;
+		}
+		@media screen and (max-width: 1000px) {
+			padding-left: 23px;
+			text-align: center;
+		}
+	}
+	@media screen and (max-width: 1350px) {
+		margin-top: 27px;
+	}
+	@media screen and (max-width: 1000px) {
+		float: none;
+		text-align: center;
+		margin-bottom: 10px;
 	}
 }
 
 .toggle-mobile {
 	display: none;
+	@media screen and (max-width: 1000px) {
+		display: block;
+		width: 50px;
+		height: 50px;
+		float: right;
+		padding: 0;
+		background: #165f9d;
+		border: none;
+		outline: 0;
+		cursor: pointer;
+		padding: 0 5px;
+		span {
+			display: block;
+			background: #fff;
+			height: 2px;
+			margin-bottom: 7px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		&.active {
+			span:first-child {
+				transform: rotate(-45deg);
+				margin-bottom: -2px;
+			}
+			span:nth-child(2) {
+				transform: rotate(45deg);
+				margin-bottom: 0;
+			}
+			span:last-child  {
+				display: none;
+			}
+		}
+	}
 }
 
 .main-menu {
@@ -208,12 +294,26 @@ a img.aligncenter {
 	height: 50px;
 	position: relative;
 	z-index: 1;
+	@media screen and (max-width: 1000px) {
+		height: auto;
+		position: absolute;
+		width: 100%;
+		z-index: 9999;
+	}
 	&__list {
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
 		display: flex;
 		justify-content: space-between;
+		@media screen and (max-width: 1000px) {
+			display: none;
+			padding-top: 50px;
+			&.active {
+				display: block;
+			}
+
+		}
 		li {
 			text-align: center;
 			height: 100%;
@@ -237,6 +337,20 @@ a img.aligncenter {
 				text-decoration: none;
 				padding: 12px 60px;
 				position: relative;
+				@media screen and (max-width: 1350px) {
+					padding: 12px 30px;
+					&::after {
+						display: none;
+					}
+				}
+				@media screen and (max-width: 1000px) {
+					padding: 10px;
+					text-align: left;
+					&:hover {
+						background: #1eded2;
+						text-decoration: none;
+					}
+				}
 				&::after {
 					position: absolute;
 					content: '';
@@ -251,6 +365,16 @@ a img.aligncenter {
 					text-decoration: underline;
 				}
 			}
+			@media screen and (max-width: 1000px) {
+				text-align: left;
+				padding: 0 !important;
+				&:first-child a,
+				&:last-child a,
+				& a {
+					padding: 10px;
+					text-align: left;
+				}
+			}
 		}
 	}
 }
@@ -261,6 +385,9 @@ a img.aligncenter {
 
 .home-slider {
 	margin-top: -50px;
+	@media screen and (max-width: 1000px) {
+		margin-top: 0;
+	}
 	.slick-arrow {
 		width: 26px;
 		height: 50px;
@@ -276,10 +403,16 @@ a img.aligncenter {
 		&.slick-prev {
 			background: url(../img/arrl.png) no-repeat;
 			left: 90px;
+			@media screen and (max-width: 1500px) {
+				left: 10px;
+			}
 		}
 		&.slick-next {
 			background: url(../img/arrr.png) no-repeat;
 			right: 90px;
+			@media screen and (max-width: 1500px) {
+				right: 10px;
+			}
 		}
 	}
 	.slick-slide {
@@ -289,6 +422,9 @@ a img.aligncenter {
 		background-position: top center;
 		&__inner {
 			padding: 0 110px;
+			@media screen and (max-width: 1500px) {
+				padding: 0 50px;
+			}
 		}
 		h3 {
 			font: 700 80px $roboto;
@@ -338,6 +474,11 @@ a img.aligncenter {
 		float: left;
 		font: italic 500 24px $roboto;
 		color: #fff;
+		@media screen and (max-width: 1350px) {
+			font-size: 20px;
+			margin-left: 30px;
+			margin-top: 61px;
+		}
 	}
 	a {
 		display: block;
@@ -352,6 +493,9 @@ a img.aligncenter {
 		color: #fff;
 		transition: $transition;
 		margin-top: 46px;
+		@media screen and (max-width: 1350px) {
+			width: 135px;
+		}
 		&:hover {
 			background: #1bc8be;
 		}
@@ -425,10 +569,17 @@ a img.aligncenter {
 			color: #fff;
 			background: #155d9c;
 			transition: $transition;
+			@media screen and (max-width: 1500px) {
+				padding: 20px 30px;
+			}
 			.title {
 				margin: 0 0 20px;
 				font: 700 24px $roboto;
 				color: #fff;
+				@media screen and (max-width: 1350px) {
+					margin-bottom: 15px;
+					font-size: 20px;
+				}
 			}
 			ul {
 				margin: 0 0 15px;
@@ -437,6 +588,9 @@ a img.aligncenter {
 				li {
 					margin-bottom: 5px;
 					font: 300 16px $roboto;
+					@media screen and (max-width: 1350px) {
+						font-size: 13px;
+					}
 				}
 			}
 			span {
@@ -583,10 +737,16 @@ a img.aligncenter {
 		&.testimonials-prev {
 			background-image: url(../img/arrl.png);
 			left: 100px;
+			@media screen and (max-width: 1500px) {
+				left: 20px;
+			}
 		}
 		&.testimonials-next {
 			background-image: url(../img/arrr.png);
 			right: 100px;
+			@media screen and (max-width: 1500px) {
+				right: 20px;
+			}
 		}
 	}
 	.all-testimonials {
