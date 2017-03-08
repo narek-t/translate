@@ -4,7 +4,7 @@
 @import "_slick.scss";
 @import "_jquery.fancybox.min.scss";
 
-//1500, 1350, 1000
+//1500, 1350, 1000, 700
 
 //sticky footer
 html, body {
@@ -14,6 +14,9 @@ html, body {
 .all-wrapper {
 	min-height: 100%;
 	margin-bottom: -560px; 
+	@media screen and (max-width: 700px) {
+		margin-bottom: 0;
+	}
 }
 
 .all-wrapper::after {
@@ -22,13 +25,22 @@ html, body {
 }
 
 .site-footer, .all-wrapper::after {
-	height: 560px; 
+	height: 560px;
+	@media screen and (max-width: 700px) {
+		height: auto;
+	}
 }
 
 .container {
 	max-width: 1400px;
 	margin: auto;
 	padding: 0 10px;
+}
+
+.main-content {
+	@media screen and (max-width: 1000px) {
+		padding-top: 50px;
+	}
 }
 
 /* =WordPress Core
@@ -387,6 +399,9 @@ a img.aligncenter {
 	margin-top: -50px;
 	@media screen and (max-width: 1000px) {
 		margin-top: 0;
+		.links-wrap {
+			text-align: center;
+		}
 	}
 	.slick-arrow {
 		width: 26px;
@@ -400,11 +415,22 @@ a img.aligncenter {
 		padding: 0;
 		z-index: 10;
 		cursor: pointer;
+		@media screen and (max-width: 1000px) {
+			top: 220px;
+		}
+		@media screen and (max-width: 700px) {
+			width: 18px;
+			height: 36px;
+			background-size: cover !important;
+		}
 		&.slick-prev {
 			background: url(../img/arrl.png) no-repeat;
 			left: 90px;
 			@media screen and (max-width: 1500px) {
 				left: 10px;
+			}
+			@media screen and (max-width: 1500px) {
+				left: 0;
 			}
 		}
 		&.slick-next {
@@ -413,6 +439,9 @@ a img.aligncenter {
 			@media screen and (max-width: 1500px) {
 				right: 10px;
 			}
+			@media screen and (max-width: 1500px) {
+				right: 0;
+			}
 		}
 	}
 	.slick-slide {
@@ -420,10 +449,20 @@ a img.aligncenter {
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: top center;
+		@media screen and (max-width: 1000px) {
+			height: auto;
+			padding: 150px 0 300px;
+		}
+		@media screen and (max-width: 700px) {
+			padding: 100px 0;
+		}
 		&__inner {
 			padding: 0 110px;
 			@media screen and (max-width: 1500px) {
 				padding: 0 50px;
+			}
+			@media screen and (max-width: 700px) {
+				padding: 0 10px;
 			}
 		}
 		h3 {
@@ -431,6 +470,13 @@ a img.aligncenter {
 			color: #fff;
 			margin-top: 220px;
 			margin-bottom: 50px;
+			@media screen and (max-width: 1000px) {
+				font-size: 43px;
+				margin: 0 0 30px;
+			}
+			@media screen and (max-width: 700px) {
+				font-size: 25px;
+			}
 		}
 		a {
 			display: inline-block;
@@ -441,6 +487,11 @@ a img.aligncenter {
 			font: 900 18px/50px $roboto;
 			text-decoration: none;
 			margin-right: 25px;
+			@media screen and (max-width: 700px) {
+				padding: 0 30px;
+				margin: 0 0 10px;
+				font-size: 15px;
+			}
 		}
 		.view-more {
 			color: #1ee0d4;
@@ -464,10 +515,23 @@ a img.aligncenter {
 	position: relative;
 	z-index: 1;
 	background: rgba(47,230,221,.7);
+	@media screen and (max-width: 1000px) {
+		height: 180px;
+		margin-top: -180px;
+	}
+	@media screen and (max-width: 700px) {
+		display: none;
+	}
 	img {
 		position: relative;
 		top: -60px;
 		float: left;
+		@media screen and (max-width: 1000px) {
+			float: none;
+			margin: auto;
+			display: block;
+			top: -90px;
+		}
 	}
 	p {
 		margin: 54px 0 0 100px;
@@ -478,6 +542,14 @@ a img.aligncenter {
 			font-size: 20px;
 			margin-left: 30px;
 			margin-top: 61px;
+		}
+		@media screen and (max-width: 1000px) {
+			text-align: center;
+			margin-top: 0;
+			margin-left: 0;
+			top: -90px;
+			position: relative;
+			float: none;
 		}
 	}
 	a {
@@ -496,6 +568,12 @@ a img.aligncenter {
 		@media screen and (max-width: 1350px) {
 			width: 135px;
 		}
+		@media screen and (max-width: 1000px) {
+			float: none;
+			margin: 10px auto 10px;
+			position: relative;
+			top: -90px;
+		}
 		&:hover {
 			background: #1bc8be;
 		}
@@ -505,6 +583,12 @@ a img.aligncenter {
 .why-we {
 	padding: 100px 0;
 	position: relative;
+	@media screen and (max-width: 1000px) {
+		padding: 50px 0;
+	}
+	@media screen and (max-width: 700px) {
+		padding: 0;
+	}
 	.img-wrap {
 		position: absolute;
 		width: 50%;
@@ -518,6 +602,15 @@ a img.aligncenter {
 			background-size: cover;
 			height: 100%;
 		}
+		@media screen and (max-width: 1000px) {
+			position: static;
+			height: 300px;
+			padding: 0;
+			width: 100%;
+			.img {
+				height: 100%;
+			}
+		}
 	}
 	.text-wrap {
 		width: 50%;
@@ -525,6 +618,14 @@ a img.aligncenter {
 		h2 {
 			font: 700 50px $roboto;
 			color: #165f9d;
+			@media screen and (max-width: 700px) {
+				font-size: 25px;
+				margin-top: 10px;
+			}
+		}
+		@media screen and (max-width: 1000px) {
+			width: 100%;
+			padding-right: 0;
 		}
 	}
 }
@@ -541,6 +642,12 @@ a img.aligncenter {
 		background-size: cover;
 		background-position: top center;
 		overflow: hidden;
+		@media screen and (max-width: 1000px) {
+			width: 50%;
+		}
+		@media screen and (max-width: 700px) {
+			width: 100%;
+		}
 		& > .title {
 			position: absolute;
 			bottom: 35px;
@@ -617,6 +724,9 @@ a img.aligncenter {
 
 .home-order {
 	padding: 70px 0;
+	@media screen and (max-width: 700px) {
+		padding: 30px 0;
+	}
 	.simple-title {
 		color: #165f9d;
 		margin: 0 0 70px;
@@ -625,9 +735,19 @@ a img.aligncenter {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+		@media screen and (max-width: 1000px) {
+			flex-wrap: wrap;
+		}
 		&-item {
 			width: 25%;
 			padding-right: 50px;
+			@media screen and (max-width: 1000px) {
+				width: 50%;
+				margin-bottom: 30px;
+			}
+			@media screen and (max-width: 700px) {
+				width: 100%;
+			}
 			img {
 				display: block;
 				max-width: 100%;
@@ -690,6 +810,10 @@ a img.aligncenter {
 	.slick-slide {
 		padding: 0 70px;
 		background: url(../img/quote.png) left top 5px no-repeat;
+		@media screen and (max-width: 700px) {
+			padding: 0 20px;
+			background-size: 16px;
+		}
 	}
 	.name {
 		color: #1fe5d9;
@@ -734,11 +858,19 @@ a img.aligncenter {
 		font-size: 0px;
 		text-indent: -9999px;
 		background-color: transparent;
+		@media screen and (max-width: 700px) {
+			width: 18px;
+			height: 36px;
+			background-size: cover;
+		}
 		&.testimonials-prev {
 			background-image: url(../img/arrl.png);
 			left: 100px;
 			@media screen and (max-width: 1500px) {
 				left: 20px;
+			}
+			@media screen and (max-width: 700px) {
+				left: 0;
 			}
 		}
 		&.testimonials-next {
@@ -746,6 +878,9 @@ a img.aligncenter {
 			right: 100px;
 			@media screen and (max-width: 1500px) {
 				right: 20px;
+			}
+			@media screen and (max-width: 700px) {
+				right: 0;
 			}
 		}
 	}
@@ -769,6 +904,9 @@ a img.aligncenter {
 
 .home-trust {
 	padding: 70px 0;
+	@media screen and (max-width: 700px) {
+		padding: 30px 0;
+	}
 	.simple-title {
 		color: #165f9d;
 		margin: 0 0 50px;
@@ -781,6 +919,10 @@ a img.aligncenter {
 		align-items: center;
 		&-item {
 			margin: 0 50px 20px;
+			@media screen and (max-width: 700px) {
+				margin: 0 auto 20px;
+				display: block;
+			}
 		}
 	}
 }
@@ -789,6 +931,9 @@ a img.aligncenter {
 	padding: 70px 0;
 	background: url(../img/adventages-bg.jpg) top center no-repeat;
 	background-size: cover;
+	@media screen and (max-width: 700px) {
+		padding: 30px 0;
+	}
 	.simple-title {
 		margin: 0 0 60px;
 		color: #fff;
@@ -796,7 +941,9 @@ a img.aligncenter {
 	&__list {
 		display: flex;
 		flex-direction: row;
-
+		@media screen and (max-width: 1000px) {
+			flex-wrap: wrap;
+		}
 	}
 	&__item {
 		padding: 0 30px;
@@ -804,6 +951,12 @@ a img.aligncenter {
 		text-align: center;
 		color: #fff;
 		margin-bottom: 20px;
+		@media screen and (max-width: 1000px) {
+			width: 50%;
+		}
+		@media screen and (max-width: 700px) {
+			width: 100%;
+		}
 		.title {
 			margin: 30px 0 10px;
 			font: 700 24px $roboto;
@@ -820,15 +973,25 @@ a img.aligncenter {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
+		@media screen and (max-width: 1000px) {
+			display: block;
+		}
 	}
 	&__inputs {
 		width: 45%;
 		padding-right: 20px;
+		@media screen and (max-width: 1000px) {
+			width: 100%;
+			padding-right: 0;
+		}
 	}
 	&__file {
 		width: 55%;
 		padding: 10px;
 		background: #f8f8f8;
+		@media screen and (max-width: 1000px) {
+			width: 100%;
+		}
 		&-inner {
 			height: 100%;
 			background: #fff;
@@ -839,6 +1002,10 @@ a img.aligncenter {
 				color: #323232;
 				font: 400 24px $roboto;
 				pointer-events: none;
+				@media screen and (max-width: 700px) {
+					margin: 25px 0 10px;
+					font-size: 19px;
+				}
 			}
 			.allowed-text {
 				font: 400 16px $roboto;
@@ -857,6 +1024,12 @@ a img.aligncenter {
 					padding-left: 35px;
 					background: url(../img/addfile.png) left center no-repeat;
 					display: inline-block;
+					@media screen and (max-width: 700px) {
+						background-position: left 15px center;
+					}
+				}
+				@media screen and (max-width: 1000px) {
+					margin-bottom: 15px;
 				}
 			}
 		}
@@ -864,6 +1037,9 @@ a img.aligncenter {
 	.gradient-btn {
 		margin-top: 50px;
 		box-shadow: inset 0 -4px 4px 0px #248a8d, inset 0 4px 4px 0px #68f5ec;
+		@media screen and (max-width: 1000px) {
+			margin: 25px auto;
+		}
 	}
 	.allowed-file-list {
 		text-align: center;
@@ -916,11 +1092,17 @@ select.simple-input {
 	top: 0;
 	left: 0;
 	width: 100%;
+	@media screen and (max-width: 700px) {
+		display: none;
+	}
 }
 
 .map-wrapper{
 	height: 480px;
 	position: relative;
+	@media screen and (max-width: 700px) {
+		height: auto;
+	}
 }
 .map-content {
 	position: relative;
@@ -931,9 +1113,17 @@ select.simple-input {
 		box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 		margin-top: 85px;
 		padding: 40px;
+		@media screen and (max-width: 700px) {
+			width: 100%;
+			margin-top: 0;
+			padding: 20px;
+		}
 	}
 	.container {
 		height: 1px;
+		@media screen and (max-width: 700px) {
+			height: auto;
+		}
 	}
 	.title {
 		margin: 0 0 25px;
@@ -948,6 +1138,9 @@ select.simple-input {
 			font: 700 16px $open;
 			color: #165f9d;
 			text-decoration: none;
+		}
+		@media screen and (max-width: 700px) {
+			padding-left: 40px;
 		}
 	}
 	.address {
@@ -972,6 +1165,9 @@ select.simple-input {
 		font: italic 300 14px $open;
 		color: #a8a8a8;
 		margin-top: 33px;
+	}
+	@media screen and (max-width: 700px) {
+		height: auto;
 	}
 }
 
@@ -1006,21 +1202,28 @@ select.simple-input {
 .with__sidebar-layout {
 	display: flex;
 	flex-direction: row;
+	margin-bottom: 70px;
+	@media screen and (max-width: 1000px) {
+		display: block;
+	}
 }
 
 .sidebar {
 	width: 315px;
 	order: -1;
 	padding-top: 80px;
+	@media screen and (max-width: 1000px) {
+		padding-top: 20px;
+		width: 100%;
+	}
 }
 
 .content__width-sidebar {
 	margin-left: 60px;
 	flex: 1;
-}
-
-.with__sidebar-layout {
-	margin-bottom: 70px;
+	@media screen and (max-width: 1350px) {
+		margin-left: 10px;
+	}
 }
 
 .inner__title {
@@ -1129,6 +1332,12 @@ select.simple-input {
 		position: relative;
 		background: #f5f5f5;
 		margin-bottom: 25px;
+		@media screen and (max-width: 1000px) {
+			width: 49%;
+		}
+		@media screen and (max-width: 700px) {
+			width: 100%;
+		}
 	}
 	.full-link {
 		position: absolute;
@@ -1185,9 +1394,21 @@ select.simple-input {
 	background-position: left center;
 	background-repeat: no-repeat;
 	padding-top: 15px;
+	@media screen and (max-width: 700px) {
+		padding-left: 40px;
+		font-size: 25px;
+		background-size: auto 30px ;
+	}
 }
 
 .content {
+	img.alignright {
+		@media screen and (max-width: 1350px) {
+			float: none;
+			margin: 10px auto;
+		}
+		
+	}
 	ul {
 		list-style-type: none;
 		li {
@@ -1223,6 +1444,9 @@ select.simple-input {
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
+		@media screen and (max-width: 1350px) {
+			display: block;
+		}
 	}
 	input[type=text] {
 		width: 399px;
@@ -1232,6 +1456,10 @@ select.simple-input {
 		border-radius: 5px;
 		outline: 0;
 		padding: 0 15px;
+		@media screen and (max-width: 1350px) {
+			width: 100%;
+			margin-bottom: 10px;
+		}
 	}
 	.gradient-btn {
 		box-shadow: inset 0 -4px 4px 0px #248a8d, inset 0 4px 4px 0px #68f5ec;
@@ -1344,11 +1572,18 @@ select.simple-input {
 		background: url(../img/review-quote.png) left top no-repeat;
 		padding-left: 95px;
 		margin-bottom: 20px;
+		@media screen and (max-width: 700px) {
+			padding-left: 0;
+			background: transparent;
+		}
 		&__inner {
 			background-color: #edf6fd;
 			border-radius: 15px;
 			padding: 30px 40px;
 			position: relative;
+			@media screen and (max-width: 700px) {
+				padding: 20px;
+			}
 			&::before {
 				content: '';
 				position: absolute;
@@ -1390,6 +1625,10 @@ select.simple-input {
 		.reviews-text {
 			font: italic 400 16px/28px $roboto;
 			margin: 20px 0 0;
+			@media screen and (max-width: 700px) {
+				font-size: 13px;
+				line-height: 20px;
+			}
 		}
 	}
 }
@@ -1423,9 +1662,15 @@ select.simple-input {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+		@media screen and (max-width: 700px) {
+			display: block;
+		}
 	}
 	&__col {
 		width: 48%;
+		@media screen and (max-width: 700px) {
+			width: 100%;
+		}
 	}
 	&__input {
 		height: 55px;
@@ -1438,12 +1683,18 @@ select.simple-input {
 		outline: 0;
 		&:last-child {
 			margin-bottom: 0;
+			@media screen and (max-width: 700px) {
+				margin-bottom: 20px;
+			}
 		}
 	}
 	textarea {
 		height: 100%;
 		padding: 20px;
 		resize: none;
+		@media screen and (max-width: 700px) {
+			height: 200px;
+		}
 	}
 
 	select.add-review__input {
@@ -1462,8 +1713,14 @@ select.simple-input {
 		margin-top: 30px;
 		display: flex;
 		flex-direction: row;
+		@media screen and (max-width: 700px) {
+			display: block;
+		}
 		.gradient-btn {
 			box-shadow: inset 0 -4px 4px 0px #248a8d, inset 0 4px 4px 0px #68f5ec;
+			@media screen and (max-width: 700px) {
+				margin-bottom: 10px;
+			}
 		}
 		p {
 			font: 300 14px/28px $roboto;
@@ -1516,14 +1773,26 @@ select.simple-input {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+		@media screen and (max-width: 700px) {
+			display: block;
+		}
 	}
 	&-col {
 		width: 49%;
+		@media screen and (max-width: 700px) {
+			width: 100%;
+		}
 		input:last-child {
 			margin-bottom: 0;
+			@media screen and (max-width: 700px) {
+				margin-bottom: 20px;
+			}
 		}
 		textarea.simple-input {
 			height: 100%;
+			@media screen and (max-width: 700px) {
+				height: 200px;
+			}
 		}
 	}
 	.submit-wrap {
@@ -1551,6 +1820,9 @@ select.simple-input {
 	p {
 		margin: 0 0 5px;
 	}
+	@media screen and (max-width: 700px) {
+		padding: 20px;
+	}
 }
 
 .download-side {
@@ -1558,6 +1830,9 @@ select.simple-input {
 	flex-direction: row;
 	justify-content: space-between;
 	margin: 60px 0;
+	@media screen and (max-width: 700px) {
+		display: block;
+	}
 	&__item {
 		display: block;
 		background-position: top center;
@@ -1570,6 +1845,12 @@ select.simple-input {
 		width: 33%;
 		border-right: 1px solid #c5d7e6;
 		padding: 125px 10px 0;
+
+		@media screen and (max-width: 700px) {
+			border: none;
+			width: 100%;
+			margin: 0 auto 40px;
+		}
 		&:last-child {
 			border: none;
 		}
@@ -1586,8 +1867,19 @@ strong {
 	justify-content: space-between;
 	width: 100%;
 	margin: 80px 0 0;
+	@media screen and (max-width: 1000px) {
+		display: block;
+		margin-top: 30px;
+		.contacts-map {
+			height: 400px;
+		}
+	}
 	&-col {
 		width: 48%;
+		@media screen and (max-width: 1000px) {
+			width: 100%;
+			margin-bottom: 20px;
+		}
 	}
 	.gradient-btn {
 		box-shadow: inset 0 -4px 4px 0px #248a8d, inset 0 4px 4px 0px #68f5ec;
@@ -1605,6 +1897,10 @@ strong {
 		background-position: left top 2px;
 		background-repeat: no-repeat;
 		min-height: 30px;
+		@media screen and (max-width: 1000px) {
+			margin-left: 0;
+			padding-left: 40px;
+		}
 		&.address {
 			background-image: url(../img/map-loc.png);
 		}

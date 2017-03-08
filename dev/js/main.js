@@ -7,6 +7,21 @@ $(document).ready(function() {
 		slidesToScroll: 1,
 		prevArrow: $('.testimonials-prev'),
 		nextArrow: $('.testimonials-next'),
+		responsive: [
+		    {
+		      breakpoint: 1000,
+		      settings: {
+		        slidesToShow: 2
+		      }
+		    },
+		    {
+		      breakpoint: 700,
+		      settings: {
+		        slidesToShow: 1,
+		        adaptiveHeigh: true,
+		      }
+		    },
+		]
 	});
 
 	$(".home-order__file-inner").dropzone({ 
